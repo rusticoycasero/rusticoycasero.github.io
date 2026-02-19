@@ -1,4 +1,2 @@
-export { CartProvider } from "./CartContext";
-export { useCart } from "./useCart";
-export { CartContext } from "./CartContextDef";
-export type { CartContextType, CartItem, CartProduct } from "./CartContextDef";
+
+// Archivo innecesario eliminado. Usar src/pages/Index.tsx como entrypoint principal.

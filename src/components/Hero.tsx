@@ -15,8 +15,11 @@ const Hero = () => {
 
       {/* Content */}
       <div className="relative z-10 container text-center px-4">
-        <p className="font-body text-sm md:text-base tracking-[0.3em] uppercase text-primary-foreground/70 mb-4 animate-fade-in">
+        <p className="font-body text-sm md:text-base tracking-[0.5em] uppercase text-primary-foreground/70 mb-4 animate-fade-in">
           Rústico y Casero
+        </p>
+        <p className="font-body text-sm md:text-base tracking-[0.3em] uppercase text-primary-foreground/70 mb-4 animate-fade-in">
+          De nuestro horno, directo a tu negocio
         </p>
         <h1 className="font-display text-4xl sm:text-5xl md:text-7xl font-bold text-primary-foreground leading-tight mb-6 animate-fade-in-up">
           Prepizzas de Calidad

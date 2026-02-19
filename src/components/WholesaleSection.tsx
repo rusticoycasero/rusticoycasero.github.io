@@ -1,4 +1,5 @@
 import { Users, PartyPopper, Truck } from "lucide-react";
+import logo from "@/assets/RUSTICO Y CASERO LOGO.png";
 
 const features = [
   {
@@ -20,15 +21,29 @@ const features = [
 
 const WholesaleSection = () => {
   return (
-    <section id="mayorista" className="py-20 md:py-28 bg-background">
+    <section id="mayorista" className="py-24 md:py-32 bg-background">
       <div className="container">
+        {/* Logo arriba */}
+        <div className="flex justify-center mb-10">
+          <img
+            src={logo}
+            alt="Rústico y Casero"
+            className="h-50 md:h-52 w-auto object-contain opacity-90"
+            loading="lazy"
+          />
+        </div>
+
+        {/* Título (bajado un poco) */}
         <div className="text-center mb-14">
-          <p className="font-body text-sm tracking-[0.2em] uppercase text-primary mb-3">Servicios</p>
+          <p className="font-body text-sm tracking-[0.2em] uppercase text-primary mb-3">
+            Servicios
+          </p>
           <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground">
             Mayorista & Catering
           </h2>
         </div>
 
+        {/* Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
           {features.map((feature) => (
             <div
@@ -38,8 +53,12 @@ const WholesaleSection = () => {
               <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-5">
                 <feature.icon className="w-7 h-7 text-primary" />
               </div>
-              <h3 className="font-display text-xl font-semibold text-foreground mb-3">{feature.title}</h3>
-              <p className="font-body text-sm text-muted-foreground leading-relaxed">{feature.description}</p>
+              <h3 className="font-display text-xl font-semibold text-foreground mb-3">
+                {feature.title}
+              </h3>
+              <p className="font-body text-sm text-muted-foreground leading-relaxed">
+                {feature.description}
+              </p>
             </div>
           ))}
         </div>

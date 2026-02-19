@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { Menu, X, ShoppingCart } from "lucide-react";
-import { useCart } from "@/contexts";
+import { Menu, X } from "lucide-react";
+import logo from "@/assets/RUSTICO Y CASERO LOGO.png";
 
 const navLinks = [
   { label: "Inicio", href: "#inicio" },
@@ -12,13 +12,14 @@ const navLinks = [
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const { totalItems, setIsOpen } = useCart();
+
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">
       <div className="container flex items-center justify-between h-16">
         {/* Logo */}
-        <a href="#inicio" className="font-display text-xl font-bold text-primary tracking-wide">
+        <a href="#inicio" className="flex items-center gap-2 font-display text-xl font-bold text-primary tracking-wide">
+          <img src={logo} alt="Logo Rústico y Casero" className="w-[70px] h-[70px] rounded-full object-cover" />
           Rústico y Casero
         </a>
 
@@ -35,21 +36,8 @@ const Navbar = () => {
           ))}
         </div>
 
-        {/* Cart + Mobile menu */}
+        {/* Mobile menu */}
         <div className="flex items-center gap-3">
-          <button
-            onClick={() => setIsOpen(true)}
-            className="relative p-2 rounded-lg hover:bg-accent transition-colors"
-            aria-label="Ver carrito"
-          >
-            <ShoppingCart className="w-5 h-5 text-foreground" />
-            {totalItems > 0 && (
-              <span className="absolute -top-1 -right-1 w-5 h-5 bg-primary text-primary-foreground text-xs font-bold rounded-full flex items-center justify-center">
-                {totalItems}
-              </span>
-            )}
-          </button>
-
           <button
             className="md:hidden p-2 rounded-lg hover:bg-accent transition-colors"
             onClick={() => setMenuOpen(!menuOpen)}

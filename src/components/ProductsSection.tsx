@@ -1,9 +1,7 @@
-import { Plus } from "lucide-react";
 import { products } from "@/data/products";
-import { useCart } from "@/contexts";
 
 const ProductsSection = () => {
-  const { addItem } = useCart();
+
 
   return (
     <section id="productos" className="py-20 md:py-28 bg-background">
@@ -48,14 +46,6 @@ const ProductsSection = () => {
                   <span className="font-display text-2xl font-bold text-primary">
                     ${product.price.toLocaleString("es-AR")}
                   </span>
-                  <button
-                    onClick={() => addItem(product)}
-                    className="flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground font-body text-sm font-bold rounded-lg hover:opacity-90 transition-opacity"
-                    aria-label={`Agregar ${product.name} al carrito`}
-                  >
-                    <Plus className="w-4 h-4" />
-                    Agregar
-                  </button>
                 </div>
               </div>
             </div>
