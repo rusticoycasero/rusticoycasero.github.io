@@ -12,6 +12,7 @@ const ProductsSection = () => {
           <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground">
             Hechas con amor artesanal
           </h2>
+          <p>PRECIOS POR MAYOR (MINIMO 5 UNIDADES)</p>
         </div>
 
         {/* Product Grid */}
